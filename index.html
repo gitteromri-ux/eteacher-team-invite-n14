@@ -60,8 +60,9 @@
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">We are proud to have partnered with Julie Gibson Clark, founding faculty at our school and one of today's leading global longevity experts. In 2023 Julie ranked as the second slowest-aging person on Earth in the Rejuvenation Olympics. A single mother with a day job as a recruiter, she did it on about $100 a month, outperforming top longevity figures who spend up to $2 million a year on advanced labs and heavy protocols.</p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">On Saturday, November 14, we will hold The Longevity Masterclass of the Year with Julie Gibson Clark. It is a unique live online event where Julie shares her story and reveals her own longevity protocol, the same protocol that outperformed some of the most expensive ones in the world.</p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;"><b>We would be delighted to invite all of you, as valued eTeacher employees, to enjoy free VIP access to the full 90-minute masterclass and Q&amp;A with Julie on Saturday, November 14, at 12:00 PM Eastern (7:00 PM Israel time).</b></p>
-<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">All you need to do is open this link, choose VIP, select your country and sign up: <a href="https://www.longevitylifeacademy.com/vip-masterclass-k7m2/?g=ezag9yq8jlbi&amp;cid=118853&amp;utm_source=eteacher-team&amp;utm_medium=email&amp;utm_campaign=employee-invite" style="color:#0b5fff;font-weight:bold;">Reserve my free VIP seat</a>. Your free coupon code is applied automatically at checkout, so there is nothing to pay and no card is needed. You will then receive an email with your link to join the masterclass.</p>
-<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">Should you have family members or loved ones who would like to join, it is perfectly fine to bring them along. They can sign up with the same link.</p>
+<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">There is nothing you need to do. You will receive an email with your link to join the masterclass on Saturday, November 14.</p>
+<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">Should you have family members or loved ones who would like to join, it is perfectly fine to bring them along.</p>
+<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">You are welcome to learn more about this exclusive event at the following link: <a href="https://www.longevitylifeacademy.com/julie-masterclass/" style="color:#0b5fff;font-weight:bold;">longevitylifeacademy.com/julie-masterclass</a></p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">At Longevity Life Academy we set out to bring longer, healthier lives to anyone who seeks them. I want that first of all for you and for the people you love. Here's to many good, healthy years ahead for all of us, and I look forward to seeing you there on this special occasion.</p>
 <p style="margin:0;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">Sincerely,<br><b>Harel Tayeb</b><br>CEO, eTeacher Group</p>
     </div>
@@ -80,19 +81,19 @@
         <b>Details used in this email</b><br>
         Session: Saturday, November 14, 12:00 PM Eastern, 7:00 PM Israel time.<br>
         VIP: 60-minute class plus a private 30-minute Q&amp;A.<br>
-        Free seat: applied by the link itself, price $0.00, no card, no code to type.<br>
-        Link: longevitylifeacademy.com/vip-masterclass-k7m2
+        Employees do nothing: they receive an email with the join link.<br>
+        Link in the email: the normal masterclass page, for reading only.
       </div>
     </div>
   </aside>
 </main>
 <script>
 (function(){
-  var K='ceo_invite_v4', email=document.getElementById('email'), subject=document.getElementById('subject'), notes=document.getElementById('notes');
+  var K='ceo_invite_v5', email=document.getElementById('email'), subject=document.getElementById('subject'), notes=document.getElementById('notes');
   var orig={e:email.innerHTML, s:subject.textContent};
   function say(id,t){var el=document.getElementById(id); el.textContent=t; clearTimeout(el._t); el._t=setTimeout(function(){el.textContent='';},3500);}
   function save(){try{localStorage.setItem(K,JSON.stringify({e:email.innerHTML,s:subject.textContent,n:notes.value}));}catch(e){}}
-  try{var o=JSON.parse(localStorage.getItem('ceo_invite_v3')||'null'); if(o&&o.n&&!localStorage.getItem(K)) notes.value=o.n;}catch(e){}
+  try{var o=JSON.parse(localStorage.getItem('ceo_invite_v4')||'null'); if(o&&o.n&&!localStorage.getItem(K)) notes.value=o.n;}catch(e){}
   try{var s=JSON.parse(localStorage.getItem(K)||'null'); if(s){ if(s.e) email.innerHTML=s.e; if(s.s) subject.textContent=s.s; if(s.n) notes.value=s.n; }}catch(e){}
   [email,subject,notes].forEach(function(el){el.addEventListener('input',save);});
   function fallbackCopy(node){var r=document.createRange(); r.selectNodeContents(node); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); var ok=false; try{ok=document.execCommand('copy');}catch(e){} sel.removeAllRanges(); return ok;}
