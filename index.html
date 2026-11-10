@@ -62,7 +62,7 @@
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;"><b>We would be delighted to invite all of you, as valued eTeacher employees, to enjoy free VIP access to the full 90-minute masterclass and Q&amp;A with Julie on Saturday, November 14, at 12:00 PM Eastern (7:00 PM Israel time).</b></p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">There is nothing you need to do. You will receive an email with your link to join the masterclass on Saturday, November 14.</p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">Should you have family members or loved ones who would like to join, it is perfectly fine to bring them along.</p>
-<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">You are welcome to learn more about this exclusive event at the following link: <a href="https://www.longevitylifeacademy.com/julie-masterclass/" style="color:#0b5fff;font-weight:bold;">longevitylifeacademy.com/julie-masterclass</a></p>
+<p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">You are welcome to learn more about this exclusive event at the following link: <a href="https://www.longevitylifeacademy.com/masterclass-november-14/" style="color:#0b5fff;font-weight:bold;">longevitylifeacademy.com/masterclass-november-14</a></p>
 <p style="margin:0 0 14px;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">At Longevity Life Academy we set out to bring longer, healthier lives to anyone who seeks them. I want that first of all for you and for the people you love. Here's to many good, healthy years ahead for all of us, and I look forward to seeing you there on this special occasion.</p>
 <p style="margin:0;font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:12pt;line-height:1.55;color:#1f2937;">Sincerely,<br><b>Harel Tayeb</b><br>CEO, eTeacher Group</p>
     </div>
@@ -82,7 +82,7 @@
         Session: Saturday, November 14, 12:00 PM Eastern, 7:00 PM Israel time.<br>
         VIP: 60-minute class plus a private 30-minute Q&amp;A.<br>
         Employees do nothing: they receive an email with the join link.<br>
-        Link in the email: the normal masterclass page, for reading only.
+        Link in the email: the read-only masterclass page, no prices and no sign-up.
       </div>
     </div>
   </aside>
@@ -95,6 +95,8 @@
   function save(){try{localStorage.setItem(K,JSON.stringify({e:email.innerHTML,s:subject.textContent,n:notes.value}));}catch(e){}}
   try{var o=JSON.parse(localStorage.getItem('ceo_invite_v4')||'null'); if(o&&o.n&&!localStorage.getItem(K)) notes.value=o.n;}catch(e){}
   try{var s=JSON.parse(localStorage.getItem(K)||'null'); if(s){ if(s.e) email.innerHTML=s.e; if(s.s) subject.textContent=s.s; if(s.n) notes.value=s.n; }}catch(e){}
+  /* saved edits made before the link change keep working: point the old link to the read-only page */
+  try{var OLD='longevitylifeacademy.com/julie-'+'masterclass'; if(email.innerHTML.indexOf(OLD)!==-1){email.innerHTML=email.innerHTML.split(OLD).join('longevitylifeacademy.com/masterclass-november-14'); save();}}catch(e){}
   [email,subject,notes].forEach(function(el){el.addEventListener('input',save);});
   function fallbackCopy(node){var r=document.createRange(); r.selectNodeContents(node); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); var ok=false; try{ok=document.execCommand('copy');}catch(e){} sel.removeAllRanges(); return ok;}
   function copyText(t){ if(navigator.clipboard&&navigator.clipboard.writeText) return navigator.clipboard.writeText(t); var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); return Promise.resolve(); }
